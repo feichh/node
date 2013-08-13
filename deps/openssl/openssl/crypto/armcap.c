@@ -29,6 +29,9 @@ unsigned int OPENSSL_rdtsc(void)
 		return 0;
 	}
 
+#if 0
+#ifndef OPENSSL_CPUID_SETUP
+#define OPENSSL_CPUID_SETUP 1
 #if defined(__GNUC__) && __GNUC__>=2
 void OPENSSL_cpuid_setup(void) __attribute__((constructor));
 #endif
@@ -78,3 +81,5 @@ void OPENSSL_cpuid_setup(void)
 	sigaction (SIGILL,&ill_oact,NULL);
 	sigprocmask(SIG_SETMASK,&oset,NULL);
 	}
+#endif
+#endif

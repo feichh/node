@@ -98,7 +98,7 @@ extern "C" {
 #define DECIMAL_SIZE(type)	((sizeof(type)*8+2)/3+1)
 #define HEX_SIZE(type)		(sizeof(type)*2)
 
-void OPENSSL_cpuid_setup(void);
+//void OPENSSL_cpuid_setup(void);
 extern unsigned int OPENSSL_ia32cap_P[];
 void OPENSSL_showfatal(const char *fmta,...);
 void *OPENSSL_stderr(void);
